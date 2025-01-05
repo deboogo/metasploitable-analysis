@@ -258,33 +258,37 @@ chmod +x /etc/rc.local
 ## 3. Delivery 
 
 To begin our attack we first create the payload using msfvenom that will be uploaded to the machine once we have exploited the vsftpd vulnerability. This payload will create a reverse shell that my msfconsole will be set to listen for. This gives me more capabilities when using msfconsole.
-![[Pasted image 20241219122357.png]]
+
+![Creating payload](images/Creating%20payload.png)
 Serving the payload using a python3 server
-![[Pasted image 20241219122443.png]]
+
+![Python server](images/Python%20server.png)
 Starting the msfconsole listener for my payload as a background job so that when I come to execute it msfconsole connects straight away
-![[Pasted image 20241219123752.png]]
+
+![Msfconsole listener](images/Msfconsole%20listener.png)
 
 ---
 
 ## 4. Exploitation 
 
 Executing the vsftpd_234_backdoor module exploit using msfconsole
-![[Pasted image 20241219121000.png]]
-Downloading and executing the payload
-![[Pasted image 20241219125004.png]]
-We now have a reverse shell on the target machine
-![[Pasted image 20241219125156.png]]
+![Backdoor module](images/Backdoor%20module.png)
 
+Downloading and executing the payload
+![Downloading payload](images/Downloading%20payload.png)
+
+We now have a reverse shell on the target machine
+![Reverse shell success](images/Reverse%20shell%20success.png)
 
 ---
 
 ## 5. Installation
 
 Using the shell command from meterpreter I can get a full system shell on the machine
-![[Pasted image 20241219125309.png]]
-Ensuring the shell is still active on restart
-![[Pasted image 20241219125409.png]]
+![Shell meterpreter command](images/Shell%20meterpreter%20command.png)
 
+Ensuring the shell is still active on restart
+![Persistence](images/Persistence.png)
 ---
 
 ## 6. Command & Control (C2)
