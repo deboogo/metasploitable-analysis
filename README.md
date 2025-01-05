@@ -258,36 +258,36 @@ chmod +x /etc/rc.local
 
 To begin our attack we first create the payload using msfvenom that will be uploaded to the machine once we have exploited the vsftpd vulnerability. This payload will create a reverse shell that my msfconsole will be set to listen for. This gives me more capabilities when using msfconsole.
 
-![Creating payload](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Creating%20payload.png)
+![Creating payload](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Creating%20payload.png)
 Serving the payload using a python3 server
 
-![Python server](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Python%20server.png)
+![Python server](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Python%20server.png)
 Starting the msfconsole listener for my payload as a background job so that when I come to execute it msfconsole connects straight away
 
-![Msfconsole listener](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Msfconsole%20listener.png)
+![Msfconsole listener](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Msfconsole%20listener.png)
 
 ---
 
 ## 4. Exploitation 
 
 Executing the vsftpd_234_backdoor module exploit using msfconsole
-![Backdoor module](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Backdoor%20module.png)
+![Backdoor module](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Backdoor%20module.png)
 
 Downloading and executing the payload
-![Downloading payload](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Downloading%20payload.png)
+![Downloading payload](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Downloading%20payload.png)
 
 We now have a reverse shell on the target machine
-![Reverse shell success](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Reverse%20shell%20success.png)
+![Reverse shell success](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Reverse%20shell%20success.png)
 
 ---
 
 ## 5. Installation
 
 Using the shell command from meterpreter I can get a full system shell on the machine
-![Shell meterpreter command](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Shell%20meterpreter%20command.png)
+![Shell meterpreter command](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Shell%20meterpreter%20command.png)
 
 Ensuring the shell is still active on restart
-![Persistence](https://github.com/deboogo/metasploitable-analysis/blob/main/images/Persistence.png)
+![Persistence](https://github.com/deboogo/metasploitable-analysis/blob/main/Images/Persistence.png)
 ---
 
 ## 6. Command & Control (C2)
